@@ -1,0 +1,498 @@
+/*main start*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.block {
+    display: block;
+}
+
+.text_decoration_line {
+    text-decoration-line: underline;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/*main end*/
+
+/*burger start*/
+.burger {
+    position: relative;
+}
+
+#burger {
+    display: none;
+}
+
+.burger_label {
+    z-index: 999;
+    cursor: pointer;
+    position: absolute;
+    padding: 0;
+    left: 8px;
+    top: 5.5px;
+}
+
+.burger_span {
+    opacity: 0;
+    user-select: none;
+    cursor: pointer;
+    font-size: 25px;
+    position: fixed;
+}
+
+.burger_line {
+    z-index: 998;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    transition: 1s;
+}
+
+.first {
+    top: 10px;
+}
+
+.second,
+.third {
+    top: 20px;
+}
+
+.fourth {
+    top: 30px;
+}
+
+
+
+#burger:checked ~ .second {
+    transform: rotate(45deg);
+    transition: 500ms;
+}
+
+#burger:checked ~ .third {
+    transform: rotate(-45deg);
+    transition: 500ms;
+}
+
+#burger:checked ~ .first {
+    opacity: 0;
+    transition: 300ms;
+}
+
+#burger:checked ~ .fourth {
+    opacity: 0;
+    transition: 300ms;
+}
+
+
+
+.white_burger {
+    top: 8px;
+    z-index: 997;
+    background-color: white;
+    height: 29px;
+    width: 41px;
+    left: 6.5px;
+    border-radius: 5px;
+}
+
+
+
+
+#burger:checked ~ nav {
+    opacity: 1;
+    padding-left: 50px;
+    transition: 750ms;
+    margin-left: 0;
+}
+
+
+
+nav {
+    transition: 3s;
+    padding-left: -50px;
+    margin-left: -100%;
+    z-index: 1;
+    opacity: 0;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    background-color: #44085C;
+    border-radius: 0 15px 15px 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+/*
+.nav_text_hover:hover {
+    background-color: #310062;
+    transition: 500ms;
+    font-size: 16px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+*/
+
+.nav_text {
+    color: white;
+    padding-left: 45px;
+    user-select: none;
+    cursor: pointer;
+    display: block;
+    transition: 1s;
+}
+
+.big_nav {
+    font-size: 18px;
+    padding-left: 0;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.nav_box {
+    margin-bottom: 13px;
+}
+
+
+.nav_line {
+    width: 150px;
+    height: 2px;
+    background-color: white;
+    box-sizing: border-box;
+    margin-left: 35px;
+    opacity: 0;
+    transition: 500ms;
+    border-radius: 15px;
+}
+
+.nav_text:hover ~ .nav_line {
+    opacity: 1;
+    transition: 200ms;
+}
+
+/*burger end*/
+
+
+/*"body" start*/
+.body {
+    padding-left: 400px;
+    padding-right: 50px;
+    font-weight: 400;
+}
+
+/*header start*/
+.welcome {
+    font-size: 45px;
+}
+
+.showcase {
+    padding-top: 35px;
+    color: #44085C;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+
+.purple_line {
+    width: 100%;
+    height: 12px;
+    background-color: #44085C;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+}
+
+/*photos start*/
+.photos {
+    padding-right: 200px;
+}
+
+.header_photo {
+    width: 400px;
+    margin: 0 0 10px 15px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+/*photos end*/
+
+/*header end*/
+
+
+
+/*torso start*/
+.lorem {
+    font-size: 17px;
+}
+
+.torso_lorem {
+    margin: 0;
+    margin: 20px 0 30px 0;
+    width: 95%;
+}
+
+.fat_torso {
+    font-weight: bold;
+    display: inline-block;
+}
+
+/*team start*/
+.person {
+    width: 350px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.under_photo {
+    display: inline-block;
+    width: 90px;
+}
+
+
+.text_team {
+    display: inline-block;
+    max-width: 350px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+.text_team:first-child {
+    margin-left: 0;
+}
+
+.teamtext {
+    border-radius: 5px;
+    background-color: #F1F1F1;
+    margin-top: 3px;
+    padding: 15px 10px;
+}
+
+.grey_under {
+    color: #868686;
+    padding: 20px 0 10px 0;
+}
+
+/*team end*/
+
+
+
+/*packages start*/
+
+.torso_lorem:last-child {}
+
+
+
+.more-package {
+    padding-top: 65px;
+}
+
+.table {
+    padding-left: 15px;
+    width: 40%;
+    display: inline-block;
+}
+
+.table_title {
+    display: block;
+    font-size: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 25px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.basic_title {
+    color: white;
+    background-color: #44085C;
+}
+
+.pro_title {
+    color: white;
+    background-color: #F1453D;
+}
+
+
+
+
+.table_background {
+    background-color: #F1F1F1;
+    text-align: center;
+}
+
+.table_text {
+    border-top: 1px solid #DDDDDD;
+    padding: 15px 0;
+}
+
+.big_table_text {
+    font-size: 30px;
+}
+
+.small_table_text {
+    font-size: 15px;
+    color: #494949;
+}
+
+.table_input {
+    padding: 10px 17px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+
+.input_basic {
+    background-color: white;
+    color: #44085C;
+}
+
+.input_pro {
+    color: white;
+    background-color: #F1453D;
+}
+
+/*packages end*/
+
+
+/*contacts start*/
+.contacts {
+    margin-top: 40px;
+}
+
+.contact_block {
+    margin: 10px 0;
+}
+
+
+
+
+
+.contact_input {
+    width: 25%;
+    height: auto;
+    padding: 0;
+    border: 2px solid #CCCCCC;
+    font-size: 20px;
+    outline: 0;
+    transition: 750ms;
+}
+
+
+.contact_input:focus{
+    transition: 10s;
+    width: 75%;
+    height: calc(auto + 15px);
+}
+
+.contact_input:hover {
+    padding: 5px 0;
+    transition: 500ms;
+}
+
+
+.contact_text {
+    font-size: 18px;
+}
+
+/*contacts end*/
+
+.reset_all {
+    width: 100%;
+    background-color: #44085C;
+    color: white;
+    padding: 15px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 75px;
+}
+
+/*torso end*/
+/*"body" end*/
+
+
+
+
+
+
+
+/*powered start*/
+.powered {
+    background-color: #F1F1F1;
+    padding: 25px 0;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.powered_div {
+    width: 100%;
+}
+
+/*powered end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.made{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 15px;
+    color: transparent;
+    cursor: default;
+}
